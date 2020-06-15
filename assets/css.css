@@ -872,6 +872,7 @@ label.custom_checkbox a {
     background: var(--color_oscuro);
     padding: 10px 20px;
     text-align: center;
+    z-index: 2;
 }
 .pie .enlace_pie {
     display: inline-block;
