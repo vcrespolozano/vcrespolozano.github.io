@@ -82,8 +82,21 @@
     .banner_superior {
         height: 420px;
     }
+    .banner_superior .contenido_banner {
+        left: 10px;
+        right: 10px;
+        top: auto;
+        bottom: 0;
+        padding: 15px;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+    }
     .banner_superior .contenido_banner .titulo_banner {
         font-size: 20px;
+        line-height: 25px;
     }
     .banner_superior .contenido_banner .descripcion_banner {
         font-size: 15px;
