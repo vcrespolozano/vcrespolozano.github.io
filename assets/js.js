@@ -4,6 +4,8 @@ $(document).ready(function(){
     var alto_banner = $('.banner_superior').outerHeight(true);
     posicion_paralax(alto_cabecera, alto_banner);
 
+    altos_bloques();
+
     $('.menu_cabecera .opcion').click(function(){
         id = $(this).attr('id');
         destino = id.substr(3);
@@ -64,4 +66,17 @@ function posicion_paralax(alto_cabecera, alto_banner) {
     var top_contenido = alto_cabecera + alto_banner;
 
     $('body').css('padding-top', top_contenido+'px');
+}
+
+// Para que todos los bloques tengan el mismo alto y el efecto de hover se vea bien
+function altos_bloques() {
+
+    var alto_bloque = 0;
+
+    $('.bloques .bloque .descripcion_bloque').each(function( index ) {
+        if( $(this).outerHeight() > alto_bloque )
+            alto_bloque = $(this).outerHeight();
+    });
+
+    $('.bloques .bloque .descripcion_bloque').css('min-height', alto_bloque+'px');
 }
