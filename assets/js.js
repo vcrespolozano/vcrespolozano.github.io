@@ -19,7 +19,11 @@ $(document).ready(function(){
 });
 
 $(window).on('load', function(){   
-    // $('.loader').fadeOut('slow');
+    var alto_cabecera = $('.cabecera').outerHeight(true);
+    var alto_banner = $('.banner_superior').outerHeight(true);
+    posicion_paralax(alto_cabecera, alto_banner);
+
+    altos_bloques();
 });
 
 $(window).scroll(function (event) {
