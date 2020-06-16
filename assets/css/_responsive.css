@@ -1,0 +1,131 @@
+@media (max-width: 1439px) {
+    .banner_superior {
+        height: 560px;
+    }
+    .banner_superior .contenido_banner .titulo_banner {
+        font-size: 25px;
+    }
+    .banner_superior .contenido_banner .descripcion_banner {
+        font-size: 17px;
+    }
+    .cabecera .menu_cabecera .opcion {
+        font-size: 17px;
+    }
+
+    .contenido {
+        padding: 35px 20px;
+    }
+    .contenido .titulo {
+        font-size: 26px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    .contenido .descripcion {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .bloques .bloque .descripcion_bloque {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1279px) {
+    .bloques .bloque .descripcion_bloque {
+        display: none;
+    }
+    .bloques .bloque {
+        padding-bottom: 0;
+    }
+    .matriz .item,
+    .matriz .item:nth-child(n) {
+        width: 31%;
+        margin-right: 3.5%;
+    }
+    .matriz .item:nth-child(3n) {
+        margin-right: 0;
+    }
+    .bloques .bloque .icono {
+        font-size: 60px;
+        margin-bottom: 20px;
+    }
+    .bloques .bloque .titulo_bloque {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .contenido .titulo {
+        font-size: 22px;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+    .matriz .item,
+    .matriz .item:nth-child(n) {
+        width: 49%;
+        margin-right: 2%;
+    }
+    .matriz .item:nth-child(2n) {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .cabecera .menu_cabecera .opcion {
+        width: 50px;
+        height: 50px;
+    }
+    .cabecera .menu_cabecera .opcion span {
+        display: none;
+    }
+
+    .banner_superior {
+        height: 420px;
+    }
+    .banner_superior .contenido_banner .titulo_banner {
+        font-size: 20px;
+    }
+    .banner_superior .contenido_banner .descripcion_banner {
+        font-size: 15px;
+    }
+
+    .bloques {
+        text-align: center;
+    }
+    .bloques .bloque {
+        width: 33%;
+        padding: 20px 15px 0;
+    }
+    .bloques .bloque .icono {
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+    .bloques .bloque .titulo_bloque {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .contenido .titulo {
+        text-align: center;
+    }
+    .contenido .titulo:after {
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .matriz .item,
+    .matriz .item:nth-child(n) {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 2.5%;
+    }
+    .matriz .item .foto_item img {
+        width: 100%;
+    }
+    
+    
+}
+
+@media (max-width: 360px) {
+
+}

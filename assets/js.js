@@ -53,12 +53,16 @@ $(window).on('orientationchange', function(){
     var alto_cabecera = $('.cabecera').outerHeight(true);
     var alto_banner = $('.banner_superior').outerHeight(true);
     posicion_paralax(alto_cabecera, alto_banner);
+
+    altos_bloques();
 });
 
 $(window).on('resize', function(){
     var alto_cabecera = $('.cabecera').outerHeight(true);
     var alto_banner = $('.banner_superior').outerHeight(true);
     posicion_paralax(alto_cabecera, alto_banner);
+
+    altos_bloques();
 });
 
 function posicion_paralax(alto_cabecera, alto_banner) {
