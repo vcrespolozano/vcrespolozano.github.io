@@ -170,6 +170,7 @@
     color: var(--color_oscuro);
     text-decoration: underline;
     font-style: italic;
+    outline: none;
     -webkit-transition: all 300ms linear;
     -moz-transition: all 300ms linear;
     -o-transition: all 300ms linear;
