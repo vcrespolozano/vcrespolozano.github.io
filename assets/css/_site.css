@@ -20,6 +20,7 @@
     text-decoration: none;
     color: var(--color_oscuro);
     white-space: nowrap;
+    outline: none;
 }
 .cabecera .menu_cabecera .opcion .fa,
 .cabecera .menu_cabecera .opcion .far,
@@ -105,6 +106,13 @@
     font-size: 18px;
     line-height: 30px;
     color: var(--color_claro);
+}
+
+/** SCROLLABLE DEL SITIO **/
+.scroll_able {
+    position: relative;
+    background: var(--color_claro);
+    z-index: 3;
 }
 
 /*** CONTENIDOS ****/

@@ -1,15 +1,19 @@
 $(document).ready(function(){
-    var ancho_ventana = $(window).width();
     var alto_cabecera = $('.cabecera').outerHeight(true);
-    var alto_banner = $('.banner_superior').outerHeight(true);
+    var alto_banner   = $('.banner_superior').outerHeight(true);
     posicion_paralax(alto_cabecera, alto_banner);
 
     altos_bloques();
 
     $('.menu_cabecera .opcion').click(function(){
-        id = $(this).attr('id');
+        id      = $(this).attr('id');
         destino = id.substr(3);
-        scroll = $('#'+destino).position().top - alto_cabecera + 1;
+
+        if( destino == 'inicio' )
+            scroll = 0;
+        else
+            scroll  = $('#'+destino).offset().top - alto_cabecera + 1;
+
         $("html").scrollTop(scroll);
 
         $('.menu_cabecera .opcion').removeClass('activa');
@@ -29,22 +33,24 @@ $(window).on('load', function(){
 $(window).scroll(function (event) {
 
     var alto_cabecera = $('.cabecera').outerHeight(true);
-    var scroll = $(window).scrollTop() + alto_cabecera;
-    var opcion = '';
+    var scroll        = $(window).scrollTop() + alto_cabecera;
+    var opcion        = '';
     
     // Posiciones de los contenidos
-    inicio = 0;
-    sobre_mi = $('#sobre_mi').position().top;
-    tecnologias = $('#tecnologias').position().top;
-    proyectos = $('#proyectos').position().top;
+    inicio      = 0;
+    sobre_mi    = $('#sobre_mi').offset().top;
+    tecnologias = $('#tecnologias').offset().top;
+    proyectos   = $('#proyectos').offset().top;
     // Esta referencia es para activar la opción de los proyectos
-    bloques_tecnologias = tecnologias + $('.bloques').position().top;
+    alto_ventana   = $(window).outerHeight(true);
+    alto_documento = $(document).outerHeight(true);
+    offset_bottom  = alto_documento - alto_ventana;
 
     if( scroll < sobre_mi )
         opcion = 'go_inicio';
     else if( scroll >= sobre_mi && scroll < tecnologias )
         opcion = 'go_sobre_mi';
-    else if( scroll >= tecnologias && scroll < bloques_tecnologias )
+    else if( scroll >= tecnologias && scroll < offset_bottom )
         opcion = 'go_tecnologias';
     else
         opcion = 'go_proyectos';
@@ -63,7 +69,7 @@ $(window).on('orientationchange', function(){
 
 $(window).on('resize', function(){
     var alto_cabecera = $('.cabecera').outerHeight(true);
-    var alto_banner = $('.banner_superior').outerHeight(true);
+    var alto_banner   = $('.banner_superior').outerHeight(true);
     posicion_paralax(alto_cabecera, alto_banner);
 
     altos_bloques();
