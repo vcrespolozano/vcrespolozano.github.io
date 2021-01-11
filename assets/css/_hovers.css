@@ -40,4 +40,8 @@
         transform:         translateY(0);
     }
 
+    .contenido .descripcion a:hover {
+        opacity: .7;
+    }
+
 }
