@@ -50,7 +50,7 @@ $(window).scroll(function (event) {
         opcion = 'go_inicio';
     else if( scroll >= sobre_mi && scroll < tecnologias )
         opcion = 'go_sobre_mi';
-    else if( scroll >= tecnologias && scroll < offset_bottom )
+    else if( scroll >= tecnologias && scroll < proyectos && scroll < offset_bottom )
         opcion = 'go_tecnologias';
     else
         opcion = 'go_proyectos';
