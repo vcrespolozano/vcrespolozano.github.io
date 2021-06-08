@@ -1,0 +1,46 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+@media (hover: hover) {
+    .cabecera .menu_cabecera .opcion:hover {
+        background: $color_oscuro;
+        color     : $color_claro;
+    }
+
+    .cabecera .menu_cabecera .opcion:hover span {
+        color: $color_claro;
+    }
+
+    .bloques .bloque:hover .icono {
+        animation         : bounceIn;
+        animation-duration: 400ms;
+        animation-delay   : 300ms;
+    }
+
+    .bloques .bloque:hover .icono,
+    .bloques .bloque:hover .titulo_bloque,
+    .bloques .bloque:hover .descripcion_bloque {
+        color: $color_oscuro;
+    }
+
+    .bloques .bloque:hover .titulo_bloque:after {
+        background: $color_oscuro;
+    }
+
+    .matriz .item:hover .textos_item:after {
+        @include Xtranslate(0);
+    }
+
+    .matriz .item:hover .textos_item .titulo_item,
+    .matriz .item:hover .textos_item .descripcion_item {
+        color: $color_claro;
+    }
+
+    .bloques .bloque:hover:after {
+        @include Ytranslate(0);
+    }
+
+    .contenido .descripcion a:hover {
+        opacity: .7;
+    }
+}

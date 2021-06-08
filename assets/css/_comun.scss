@@ -1,0 +1,203 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+/**** CSS PROPIO ****/
+.transicion {
+  @include transicion(300ms); 
+}
+
+input {
+  font-family: "MuseoModerno", cursive;
+}
+
+table {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "MuseoModerno", cursive;
+  font-weight: 400;
+  background : $color_claro;
+  padding-top: 770px;
+}
+
+.izq {
+  float: left;
+}
+.der {
+  float: right;
+}
+
+.centrar {
+  text-align: center;
+}
+
+.limpiar,
+.limpia {
+  display: block;
+  clear  : both;
+}
+
+.contenedor {
+  max-width: $w_1260;
+  margin   : 0 auto;
+  position : relative;
+  z-index  : 0;
+}
+.contenedor.w_1600 {
+  max-width: $w_1600;
+}
+.contenedor.w_768 {
+  max-width: $w_768;
+}
+.contenedor.w_480 {
+  max-width: $w_480;
+}
+
+.titulo_w {
+  font-size     : 26px;
+  text-align    : center;
+  margin-bottom : 20px;
+  padding-bottom: 20px;
+  border-bottom : 1px solid $color_claro;
+  color         : $color_claro;
+}
+
+.mensaje_std {
+  color     : $color_claro;
+  font-size : 16px;
+  text-align: center;
+  padding   : 10px;
+  margin    : 10px 0 20px;
+}
+
+.btn_std {
+  display        : inline-block;
+  background     : $color_claro;
+  color          : $color_oscuro;
+  border         : 1px solid $color_claro;
+  text-align     : center;
+  font-size      : 16px;
+  line-height    : 38px;
+  height         : 40px;
+  border-radius  : 15px;
+  padding        : 0 20px;
+  min-width      : 200px;
+  text-decoration: none;
+  cursor         : pointer;
+}
+
+/*** CAMPOS ESTÁNDAR ****/
+.caja_campo {
+  margin-bottom: 20px;
+  position     : relative;
+
+  label {
+    display      : block;
+    color        : $color_claro;
+    font-size    : 16px;
+    margin-bottom: 8px;
+  }
+
+  input {
+    display      : block;
+    width        : 100%;
+    margin       : 0 auto;
+    border       : none;
+    background   : none;
+    border-bottom: 1px solid $color_claro;
+    color        : $color_claro;
+    line-height  : 40px;
+    font-size    : 16px;
+    padding      : 0 20px;
+    text-align   : center;
+  }
+
+  .contador_char {
+    position   : absolute;
+    bottom     : 0;
+    right      : 0;
+    font-size  : 12px;
+    color      : $color_claro;
+    line-height: 40px;
+    text-align : right;
+  }
+}
+
+/*** CUSTOM CHECKBOX ***/
+.checkbox {
+    display         : inline-block;
+    vertical-align  : middle;
+    position        : relative;
+    height          : 30px;
+    width           : 30px;
+    border-radius   : 5px;
+    border          : 1px solid $color_claro;
+    background-color: transparent;
+    margin-right    : 12px;
+  
+    &:after {
+      content : "";
+      position: absolute;
+      display : none;
+    }
+}
+label.custom_checkbox {
+  display            : block;
+  position           : relative;
+  margin-bottom      : 12px;
+  cursor             : pointer;
+  font-size          : 16px;
+  line-height        : 40px;
+  -webkit-user-select: none;
+  -moz-user-select   : none;
+  -ms-user-select    : none;
+  user-select        : none;
+
+  input {
+    position: absolute;
+    opacity : 0;
+    cursor  : pointer;
+    height  : 0;
+    width   : 0;
+  }
+  input:checked ~ .checkbox:after {
+    display: block;
+  }
+  .checkbox:after {
+    left             : 10px;
+    top              : 6px;
+    width            : 8px;
+    height           : 13px;
+    border           : solid $color_claro;
+    border-width     : 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform    : rotate(45deg);
+    transform        : rotate(45deg);
+  }
+  a {
+    color: $color_claro;
+  }
+}
+
+/**** DELAY CUSTOM ****/
+.animate__animated.animate__delay-1500ms {
+  -webkit-animation-delay: 1500ms;
+  animation-delay        : 1500ms;
+  -webkit-animation-delay: 1500ms;
+  animation-delay        : 1500ms;
+}
+
+.animate__animated.animate__delay-500ms {
+  -webkit-animation-delay: 500ms;
+  animation-delay        : 500ms;
+  -webkit-animation-delay: 500ms;
+  animation-delay        : 500ms;
+}
+
+.animate__animated.animate__delay-300ms {
+  -webkit-animation-delay: 300ms;
+  animation-delay        : 300ms;
+  -webkit-animation-delay: 300ms;
+  animation-delay        : 300ms;
+}

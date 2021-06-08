@@ -1,0 +1,85 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+/*** TECNOLOGIAS ***/
+.contenido#tecnologias,
+.contenido.oscuro#tecnologias {
+    background-color: none;
+    background-image: url('../img/bloques_bg2.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bloques {
+    position: relative;
+    z-index: 2;
+
+    .bloque {
+        position      : relative;
+        display       : inline-block;
+        vertical-align: top;
+        width         : percentage((100/6)/100);
+        text-align    : center;
+        padding       : 25px 15px 50px;
+        overflow      : hidden;
+
+        &:after {
+            content           : '';
+            position          : absolute;
+            left              : 0;
+            right             : 0;
+            top               : 0;
+            bottom            : 0;
+            background        : $color_claro;
+            @include transicion(250ms);
+            @include Ytranslate(100%);
+            z-index: 1;
+        }
+
+        .icono {
+            position     : relative;
+            display      : block;
+            text-align   : center;
+            font-size    : 70px;
+            margin-bottom: 25px;
+            color        : $color_claro;
+            z-index      : 2;
+        }
+
+        .titulo_bloque {
+            position      : relative;
+            position      : relative;
+            display       : block;
+            font-size     : 20px;
+            margin-bottom : 25px;
+            padding-bottom: 10px;
+            color         : $color_claro;
+            z-index       : 2;
+
+            &:after {
+                content           : '';
+                position          : absolute;
+                left              : 0;
+                right             : 0;
+                margin            : 0 auto;
+                bottom            : 0;
+                width             : 100px;
+                height            : 1px;
+                background        : $color_claro;
+                @include transicion(300ms);
+            }
+        }
+
+        .descripcion_bloque {
+            position   : relative;
+            display    : block;
+            font-size  : 16px;
+            line-height: 22px;
+            text-align : justify;
+            color      : $color_claro;
+            z-index    : 2;
+        }
+    }
+}

@@ -1,0 +1,93 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+/*** CONTENIDOS ****/
+.contenido {
+    background: $color_claro;
+    position  : relative;
+    padding   : 50px 25px;
+    z-index   : 3;
+
+    &#tecnologias {
+        padding-bottom: 0;
+    }
+
+    .titulo {
+        position      : relative;
+        font-size     : 28px;
+        font-weight   : 600;
+        color         : $color_oscuro;
+        padding-bottom: 25px;
+        margin-bottom : 25px;
+
+        &:after {
+            content   : '';
+            position  : absolute;
+            bottom    : 0;
+            left      : 0;
+            height    : 1px;
+            width     : 180px;
+            background: $color_oscuro;
+        }
+
+        &.centrar {
+            &:after {
+                right : 0;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .descripcion {
+        font-size  : 17px;
+        line-height: 24px;
+        color      : $color_oscuro;
+        text-align : justify;
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        a {
+            color             : $color_oscuro;
+            text-decoration   : underline;
+            font-style        : italic;
+            outline           : none;
+            @include transicion(300ms);
+        }
+    }
+
+    &.oscuro {
+        background: $color_oscuro;
+
+        .titulo {
+            color: $color_claro;
+
+            &:after {
+                background: $color_claro;
+            }
+        }
+
+        .descripcion {
+            color: $color_claro;
+        }
+    }
+
+    &.luted {
+
+        .titulo {
+            z-index: 2;
+        }
+
+        &:after {
+            content: '';
+            @include absolutePos(0, 0, 0, 0);
+            background: rgba(0, 0, 0, .65);
+            z-index: 1;
+        }
+    }
+}

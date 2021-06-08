@@ -1,0 +1,31 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+/***** PIE *****/
+.pie {
+    position  : relative;
+    background: $color_oscuro;
+    padding   : 10px 20px;
+    text-align: center;
+    z-index   : 2;
+
+    .enlace_pie {
+        display        : inline-block;
+        text-decoration: none;
+        color          : $color_claro;
+        font-size      : 18px;
+        line-height    : 30px;
+
+        .fa, .fab, .fad, .fal, .far, .fas {
+            margin-right: 10px;
+            font-size   : 24px;
+        }
+    }
+}
+
+/** SCROLLABLE DEL SITIO **/
+.scroll_able {
+    position  : relative;
+    background: $color_claro;
+    z-index   : 3;
+}

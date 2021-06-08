@@ -1,0 +1,55 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+/*** BANNER SUPERIOR - PARALLAX ****/
+.banner_superior {
+    position       : fixed;
+    top            : 50px;
+    left           : 0;
+    right          : 0;
+    background     : url('../img/bg_banner.jpg') center no-repeat;
+    background-size: cover;
+    height         : 720px;
+    z-index        : 0;
+
+    .contenido_banner {
+        position         : absolute;
+        left             : 20px;
+        right            : 20px;
+        top              : 50%;
+        margin           : 0 auto;
+        padding          : 25px;
+        max-width        : 1024px;
+        text-align       : center;
+        background       : $luto_global;
+        @include XYtranslate(0, -50%);
+
+        .titulo_banner {
+            position      : relative;
+            font-size     : 26px;
+            font-weight   : 600;
+            color         : $color_claro;
+            padding-bottom: 20px;
+            margin-bottom : 20px;
+            letter-spacing: 1px;
+
+            &:after {
+                content   : '';
+                position  : absolute;
+                bottom    : 0;
+                left      : 20px;
+                right     : 20px;
+                margin    : 0 auto;
+                height    : 1px;
+                max-width : 360px;
+                background: $color_claro;
+            }
+        }
+
+        .descripcion_banner {
+            font-size  : 18px;
+            line-height: 30px;
+            color      : $color_claro;
+        }
+    }
+}

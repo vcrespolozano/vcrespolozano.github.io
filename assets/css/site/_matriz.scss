@@ -1,0 +1,80 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+/*** MATRIZ DE ITEMS ****/
+.matriz {
+    position  : relative;
+    text-align: left;
+
+    .item {
+        display       : inline-block;
+        vertical-align: top;
+        width         : 24%;
+        margin-right  : 1.333%;
+        margin-bottom : 1.5%;
+
+        &:nth-child(4n) {
+            margin-right: 0
+        }
+
+        .foto_item {
+            display: block;
+            width  : 100%;
+
+            img {
+                display  : block;
+                max-width: 100%;
+                height   : auto;
+            }
+        }
+
+        .textos_item {
+            overflow: hidden;
+            position: relative;
+            padding : 15px;
+
+            &:after {
+                content           : '';
+                position          : absolute;
+                z-index           : 0;
+                left              : 0;
+                right             : 0;
+                top               : 0;
+                bottom            : 0;
+                background        : $color_oscuro;
+                @include transicion(300ms);
+                @include Xtranslate(-100%);
+                z-index           : 1;
+            }
+
+            &:before {
+                content           : '';
+                position          : absolute;
+                left              : 0;
+                top               : 0;
+                bottom            : 0;
+                width             : 5px;
+                background        : $color_oscuro;
+                @include transicion(300ms);
+                z-index           : 2;
+            }
+
+            .titulo_item {
+                position     : relative;
+                margin-bottom: 15px;
+                font-size    : 16px;
+                font-weight  : 600;
+                color        : $color_oscuro;
+                z-index      : 2;
+            }
+
+            .descripcion_item {
+                position   : relative;
+                font-size  : 15px;
+                line-height: 20px;
+                color      : $color_oscuro;
+                z-index    : 2;
+            }
+        }
+    }
+}
