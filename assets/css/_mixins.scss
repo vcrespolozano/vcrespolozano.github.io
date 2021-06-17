@@ -29,6 +29,14 @@
     transform        : translate($X, $Y);
 }
 
+@mixin scalar($escala) {
+    -webkit-transform: scale($escala);
+    -moz-transform   : scale($escala);
+    -ms-transform    : scale($escala);
+    -o-transform     : scale($escala);
+    transform        : scale($escala);
+}
+
 @mixin absolutePos($left, $top, $right, $bottom) {
     position: absolute;
     left    : $left;

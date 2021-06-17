@@ -43,4 +43,24 @@
     .contenido .descripcion a:hover {
         opacity: .7;
     }
+
+    .github:hover {
+        max-width       : 200px;
+        padding-right   : 60px;
+        background-color: $color_oscuro;
+        border-color    : $color_claro;
+        background-image: url('../img/github_icon_w.png');
+    }
+    .github:hover .txt {
+        color  : $color_claro;
+        opacity: 1;
+    }
+    .matriz_v2 .item:hover .titulo_item {
+        bottom    : 0;
+        background: transparent;
+        color     : $color_oscuro;
+    }
+    .matriz_v2 .item:hover .foto_item img {
+        @include scalar(1.2);
+    }
 }

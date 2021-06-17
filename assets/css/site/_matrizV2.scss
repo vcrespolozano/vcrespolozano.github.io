@@ -1,0 +1,52 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+/*** MATRIZ DE ITEMS ****/
+.matriz_v2 {
+    position  : relative;
+    text-align: left;
+
+    .item {
+        position      : relative;
+        display       : inline-block;
+        vertical-align: top;
+        width         : 32%;
+        margin-right  : 2%;
+        margin-bottom : 1.5%;
+        padding-bottom: 50px;
+        z-index       : 1;
+
+        &:nth-child(3n) {
+            margin-right: 0
+        }
+
+        .foto_item {
+            position: relative;
+            display : block;
+            width   : 100%;
+            overflow: hidden;
+            z-index : 2;
+
+            img {
+                display  : block;
+                width    : 100%;
+                max-width: 100%;
+                height   : auto;
+                @include transicion(300ms);
+                @include scalar(1);
+            }
+        }
+
+        .titulo_item {
+            @include absolutePos(0, auto, 0, 50px);
+            padding    : 0 15px;
+            height     : 50px;
+            line-height: 50px;
+            font-size  : 18px;
+            font-weight: 600;
+            background : rgba(0, 0, 0, .4);
+            color      : $color_claro;
+            z-index    : 2;
+        }
+    }
+}

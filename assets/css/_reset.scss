@@ -25,7 +25,7 @@ time, mark, audio, video {
 }
 
 /* make sure to set some focus styles for accessibility */
-:focus {
+*:focus {
     outline: 0;
 }
 
@@ -139,6 +139,11 @@ html {
 
 a:focus {
     outline: thin dotted;
+}
+
+a:focus,
+a:visited {
+    outline: none;
 }
 
 /**

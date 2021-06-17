@@ -1,9 +1,14 @@
+const year = new Date().getFullYear();
+
 $(document).ready(function(){
     var alto_cabecera = $('.cabecera').outerHeight(true);
     var alto_banner   = $('.banner_superior').outerHeight(true);
     posicion_paralax(alto_cabecera, alto_banner);
 
     altos_bloques();
+
+    // Fijamos el año
+    $('#year').html(year);
 
     $('.menu_cabecera .opcion').click(function(){
         id      = $(this).attr('id');
@@ -41,7 +46,8 @@ $(window).scroll(function (event) {
     sobre_mi    = $('#sobre_mi').offset().top;
     tecnologias = $('#tecnologias').offset().top;
     proyectos   = $('#proyectos').offset().top;
-    // Esta referencia es para activar la opción de los proyectos
+    plantillas  = $('#plantillas').offset().top;
+    // Esta referencia es para activar la opción de las plantillas
     alto_ventana   = $(window).outerHeight(true);
     alto_documento = $(document).outerHeight(true);
     offset_bottom  = alto_documento - alto_ventana;
@@ -50,10 +56,12 @@ $(window).scroll(function (event) {
         opcion = 'go_inicio';
     else if( scroll >= sobre_mi && scroll < tecnologias )
         opcion = 'go_sobre_mi';
-    else if( scroll >= tecnologias && scroll < proyectos && scroll < offset_bottom )
+    else if( scroll >= tecnologias && scroll < proyectos )
         opcion = 'go_tecnologias';
-    else
+    else if( scroll >= proyectos && scroll < plantillas && scroll < offset_bottom )
         opcion = 'go_proyectos';
+    else
+        opcion = 'go_plantillas';
 
     $('.menu_cabecera .opcion').removeClass('activa');
     $('#'+opcion).addClass('activa');

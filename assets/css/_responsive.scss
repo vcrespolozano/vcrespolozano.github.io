@@ -38,8 +38,8 @@
     }
     .matriz .item,
     .matriz .item:nth-child(n) {
-        width       : 31%;
-        margin-right: 3.5%;
+        width         : 31%;
+        margin-right  : 3.5%;
     }
     .matriz .item:nth-child(3n) {
         margin-right: 0;
@@ -51,6 +51,13 @@
     .bloques .bloque .titulo_bloque {
         font-size    : 18px;
         margin-bottom: 20px;
+    }
+    .matriz_v2 .item {
+        padding-bottom: 0;
+    }
+    .matriz_v2 .item .titulo_item {
+        bottom   : 0;
+        font-size: 16px;
     }
 }
 
@@ -66,6 +73,13 @@
         margin-right: 2%;
     }
     .matriz .item:nth-child(2n) {
+        margin-right: 0;
+    }
+    .matriz_v2 .item {
+        width       : 49%;
+        margin-right: 2%;
+    }
+    .matriz_v2 .item:nth-child(2n) {
         margin-right: 0;
     }
 }
@@ -147,7 +161,18 @@
         font-size: 16px;
     }
     
-    
+    .matriz_v2 .item,
+    .matriz_v2 .item:nth-child(n) {
+        width        : 100%;
+        margin       : 0;
+        margin-bottom: 2.5%;
+    }
+    .pie {
+        padding: 10px;
+    }
+    .pie p {
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 360px) {
