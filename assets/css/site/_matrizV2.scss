@@ -48,5 +48,17 @@
             color      : $color_claro;
             z-index    : 2;
         }
+
+        .in_progress {
+            @include absolutePos(auto, 4px, 4px, auto);
+            padding       : 5px;
+            color         : $color_claro;
+            text-align    : center;
+            font-size     : 14px;
+            text-transform: uppercase;
+            pointer-events: none;
+            background: rgba(200, 0, 0, .7);
+            z-index: 3;
+        }
     }
 }
